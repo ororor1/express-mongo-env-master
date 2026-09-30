@@ -1,0 +1,28 @@
+ 
+<%- include ../layouts/header.ejs %>
+
+<table id='persons' width='80%'>
+	<thead>
+	<tr>
+		<th>姓名</th>
+		<th>职位</th>
+		<th>&nbsp;</th>
+	</tr>
+	</thead>
+	
+	<tbody>
+
+	<% if (data) { %>
+	<% data.forEach(function(emp){ %>
+		<tr>
+			<td><%= emp.name %></td>
+			<td><%= emp.job %></td>
+		</tr>
+	<% }) %>
+	<% } %>
+   <tbody>
+</table>
+
+
+
+<%- include ../layouts/footer.ejs %>
